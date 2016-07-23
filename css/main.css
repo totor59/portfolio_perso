@@ -98,12 +98,15 @@ textarea {
 /* ==========================================================================
    General
    ========================================================================== */
-
-body { 
+html {
+	min-height: 100%;
 	position: relative;
+}
+body {
+        padding: 0;
+	margin: 0 o 40px 0;
 	font-family: Arial;
 	font-size: 13px;
-	height: 100vh;
 }
 li {
 	list-style: none;
@@ -137,6 +140,7 @@ a {
 main {
 	text-align: center;
 	margin-top: 110px;
+	margin-bottom: 40px;
 }
 
 input {
@@ -156,9 +160,9 @@ button {
 footer {
 	height: 40px;
 	background-color: #F2F2F2;
+	width: 100%;
 	position: absolute;
 	bottom: 0;
-	width: 100%;
 }
 footer p {
 	width: 100%;
