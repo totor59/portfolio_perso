@@ -3,23 +3,15 @@
 ////////////////////////
 
 
-// select a random page
-
+// Store the differents pages of the site in arrayPage 
 var arrayPage = ["contact.html", "portfolio.html", "about.html"];
-function randomiZe() {
-	return arrayPage[Math.floor(Math.random() * arrayPage.length)];
-}
-var randomPage = randomiZe();
-
-
-// redirect to the randompage
-
-function redirection(){
+// Select a random page and store the result in randomPage
+var randomPage = arrayPage[Math.floor(Math.random() * arrayPage.length)];
+// Create a function to redirect to the randomPage URL
+function randomRedirection() { 	
 	document.location.href= randomPage;
 }
-
-// assign a variable to the button element
-
+// Assign a variable to the button element
 var randomButton = document.getElementById("random");
-console.log(randomPage);
-randomButton.onclick = redirection;
+// Call randomRedirection on randomButton click event
+randomButton.onclick = randomRedirection;
