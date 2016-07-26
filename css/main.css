@@ -101,6 +101,8 @@ textarea {
 html {
 	min-height: 100%;
 	position: relative;
+	color: #585858;
+	font-family: Arial;
 }
 body {
         padding: 0;
@@ -117,9 +119,13 @@ li {
 }
 a { 
 	text-decoration: none;
+	color: #585858;
+}
+a:hover {
 	color: #000;
 }
-.active {
+.active,
+.active:hover {
 	border-bottom: 3px solid #4285F4;
 	color: #4285F4;
 	font-weight: bold;
@@ -128,6 +134,14 @@ a {
 .active a {
 	
 }
+
+img[src*="icon"] {
+	opacity: 0.6;
+}
+img[src*="icon"]:hover {
+	opacity: 1;
+}
+
 
 /* ==========================================================================
    Header General
@@ -155,7 +169,20 @@ a {
 	display: none;
 	height: 25px;
 	width: 630px;
+	padding:6px 15px 6px 30px;
+	margin:3px; 
+	background: url('../img/search.png') no-repeat 6px 10px;
+	background-color: #fff;	
+	border: 1px solid #e0e0e0;
 }
+.navbardefault input:hover {
+	border: 1px solid #bdbdbd;
+}
+
+.navbardefault input:focus {
+	border: 1px solid #4386f9;
+}
+
 img[src*="logo"] {
 	height: 40px;
 	margin: 10px 5px;
