@@ -211,10 +211,10 @@ img[src*="logo"] {
 
 
 /* ==========================================================================
-   Main-content
+   Main-content Index
    ========================================================================== */
 
-main {
+.index {
 	text-align: center;
 	margin-top: 110px;
 	margin-bottom: 40px;
@@ -248,6 +248,50 @@ footer p {
 	text-align: center;
 }
 
+
+/* ==========================================================================
+   Portfolio
+   ========================================================================== */
+.portfolio {
+	width: 100%;
+	margin: 50px 0 50px 0;
+
+}
+.thumbnails {
+	min-width: 230px;
+	max-width: 250px;
+	margin: 10px 10px;
+	padding: 0;
+	position: relative;
+	border-radius: 10px;
+
+}
+.thumbnails img {
+	width: 100%;
+	z-index: 0;
+	border-radius: 10px;
+	border: 2px solid #757575;
+}
+figcaption {
+	line-height: 60px;
+	width: 100%;
+	background-color: #fff;
+	position: absolute;
+	bottom: 0;
+	z-index: 1;
+	border: 2px solid #424242;
+	border-radius: 0 0 10px 10px;
+	display: none;
+}
+.thumbnails:hover {
+	box-shadow: -2px 4px 4px 4px #4386f9;
+}
+.thumbnails:hover figcaption {
+	display: block;
+}
+.thumbnails:hover img {
+	border: 2px solid #424242;
+}
 
 /* ##################################################################### */
 /* ##########################   SMARTPHONE   ########################### */
