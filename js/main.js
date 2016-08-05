@@ -1,6 +1,6 @@
-////////////////////////
-/////I HAVE CHANCE//////
-////////////////////////
+//////////////////////////////
+/////INDEX/I have chance//////
+//////////////////////////////
 
 
 // Store the differents pages of the site in arrayPage 
@@ -15,3 +15,10 @@ function randomRedirection() {
 var randomButton = document.getElementById("random");
 // Call randomRedirection on randomButton click event
 randomButton.onclick = randomRedirection;
+
+
+
+/////////////////////////////////
+/////ABOUT/Twitter timeline//////
+/////////////////////////////////
+

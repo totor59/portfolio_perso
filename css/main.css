@@ -7,13 +7,13 @@
  */
 
 /* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
+Base styles: opinionated defaults
+========================================================================== */
 
 html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
+	color: #222;
+	font-size: 1em;
+	line-height: 1.4;
 }
 
 /*
@@ -25,13 +25,13 @@ html {
  */
 
 ::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
+	background: #b3d4fc;
+	text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
-    text-shadow: none;
+	background: #b3d4fc;
+	text-shadow: none;
 }
 
 /*
@@ -39,12 +39,12 @@ html {
  */
 
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
 }
 
 /*
@@ -59,7 +59,7 @@ iframe,
 img,
 svg,
 video {
-    vertical-align: middle;
+	vertical-align: middle;
 }
 
 /*
@@ -67,9 +67,9 @@ video {
  */
 
 fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
+	border: 0;
+	margin: 0;
+	padding: 0;
 }
 
 /*
@@ -77,27 +77,27 @@ fieldset {
  */
 
 textarea {
-    resize: vertical;
+	resize: vertical;
 }
 
 /* ==========================================================================
-   Browser Upgrade Prompt
-   ========================================================================== */
+Browser Upgrade Prompt
+========================================================================== */
 
 .browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+	margin: 0.2em 0;
+	background: #ccc;
+	color: #000;
+	padding: 0.2em 0;
 }
 
 /* ==========================================================================
-   Author's custom style
-   ========================================================================== */
+Author's custom style
+========================================================================== */
 
 /* ==========================================================================
-   General
-   ========================================================================== */
+General
+========================================================================== */
 html {
 	min-height: 100%;
 	position: relative;
@@ -105,7 +105,7 @@ html {
 	font-family: Arial;
 }
 body {
-        padding: 0;
+	padding: 0;
 	margin: 0 o 40px 0;
 	font-family: Arial;
 	font-size: 13px;
@@ -132,7 +132,7 @@ a:hover {
 	padding-bottom: 14px;
 }
 .active a {
-	
+
 }
 
 img[src*="icon"] {
@@ -144,8 +144,8 @@ img[src*="icon"]:hover {
 
 
 /* ==========================================================================
-   Header General
-   ========================================================================== */
+Header General
+========================================================================== */
 .navbardefault, 
 .subnav {
 	border-bottom: 1px solid #E5E5E5;
@@ -194,8 +194,8 @@ img[src*="logo"] {
 
 
 /* ==========================================================================
-   Header MainPage
-   ========================================================================== */
+Header MainPage
+========================================================================== */
 
 .navbar li {
 	display: inline;
@@ -207,12 +207,28 @@ img[src*="logo"] {
 	border-radius: 50%;
 	margin-right: 15px;
 }
+.btn-group {
+	margin-top: 20px;
+}
+.btn-group a {
+	text-decoration: none;
+	color: #757575;
+	background-color: #eeeeee;
+	padding: 10px 20px 10px 20px;
+	font-size: 12px;
+	font-weight: bold;
+	margin-left: 5px;
 
-
+}
+.btn-group a:hover {
+	border: 1px solid #bdbdbd;
+	font-weight: bold;
+	color: black;
+}
 
 /* ==========================================================================
-   Main-content Index
-   ========================================================================== */
+Main-content Index
+========================================================================== */
 
 .index {
 	text-align: center;
@@ -224,17 +240,22 @@ img[src*="logo"] {
 	display: block;
 	width: 50%;
 	margin-left: 25%;
+	margin-right: 25%;
 }
 
-button {
+.index button {
 	margin: 30px 8px;
 	cursor: pointer;
+}
+.index h1 {
+	display: inline-block;
+	width: 100%;
 }
 
 
 /* ==========================================================================
-   Footer
-   ========================================================================== */
+Footer
+========================================================================== */
 
 footer {
 	height: 40px;
@@ -250,17 +271,16 @@ footer p {
 
 
 /* ==========================================================================
-   Portfolio
-   ========================================================================== */
+Portfolio
+========================================================================== */
 .portfolio {
 	width: 100%;
 	margin: 50px 0 50px 0;
 
 }
 .thumbnails {
-	min-width: 230px;
-	max-width: 250px;
-	margin: 10px 10px;
+	max-width: 230px;
+	margin: 20px 20px;
 	padding: 0;
 	position: relative;
 	border-radius: 10px;
@@ -272,7 +292,7 @@ footer p {
 	border-radius: 10px;
 	border: 2px solid #757575;
 }
-figcaption {
+.thumbnails figcaption {
 	line-height: 60px;
 	width: 100%;
 	background-color: #fff;
@@ -292,6 +312,198 @@ figcaption {
 .thumbnails:hover img {
 	border: 2px solid #424242;
 }
+
+
+/* ==========================================================================
+About
+========================================================================== */
+
+.about {
+	width: 90%;
+	margin: 5% 5%;
+}
+.left, .right {
+	margin-top: 20px;
+}
+
+@media screen and (min-width:700px) {
+.left {
+	width: 60%;
+}
+.right {
+	width: 35%;
+}
+}
+.content figcaption,
+h2 {
+	color: #4285F4;
+	text-decoration: underline;
+	font-size: 22px;
+	font-weight: bold;
+	font-family: Arial;
+}
+
+/* Article principal */
+.left article {
+	background-color: #F1F1F1;
+	padding: 10px;
+	border-radius: 10px;
+	margin: 20px 0;
+}
+.job {
+	color: #006621;
+}
+article p, article h2 {
+	margin: 0;
+}
+article a {
+	color: #1A0DAB;
+}
+article a:hover {
+	color: #1A0DAB;
+	text-decoration: underline;
+}
+/* Aside */
+.right img[src="img/toto.png"] {
+	min-height: 0;
+	min-width: 0;
+	max-height: 400px;
+        width: 100%;	
+	border-radius: 10px;
+}
+.right .img-container {
+	border-radius: 10px;
+	background-color: #F1F1F1;
+	padding: 10px;
+}
+.twitter-timeline {
+	background-color: #F1F1F1;
+}
+
+
+/* Skills bars */
+
+
+.content figcaption {
+	background-color: #F1F1F1;
+       /* line-height: 50px;*/
+	padding: 10px;
+}
+.content {
+	width: 100%;
+	margin: 20px 0 0 0;
+	position: relative;
+	float: left;
+	font-size: 12px;
+	line-height: 2em;
+	border: 5px solid #F1F1F1;
+	border-radius: 10px;
+}
+
+.col {
+	width: 100%;
+}
+
+#skill {
+	list-style: none;
+	padding: 10px;
+}
+
+#skill li {
+	margin-left: 0;
+	margin-bottom: 25px;
+	height: 25px;
+	background-color: #F1F1F1;
+	border-radius: 10px;
+	border: 1px solid #E5E5E5;
+}
+#skill li:last-child {
+	margin-bottom: 0;
+}
+#skill li em {
+	position: relative;
+	top: -20px;
+}
+
+.expand {
+	height: 20px;
+	margin: 2px 0;
+	border-radius: 10px;
+	background: #2187e7;
+	position: absolute;
+	box-shadow: 0px 0px 10px 1px rgba(0,198,255,0.4);
+	color: #FFF;
+	font-weight: bold;
+	padding-left: 10px;
+	line-height: 20px;
+}
+
+.html5 {
+	width: 70%;
+	-moz-animation: html5 2s ease-out;
+	-webkit-animation: html5 2s ease-out;
+}
+
+.css3 {
+	width: 90%;
+	-moz-animation: css3 2s ease-out;
+	-webkit-animation: css3 2s ease-out;
+}
+
+.jquery {
+	width: 50%;
+	-moz-animation: jquery 2s ease-out;
+	-webkit-animation: jquery 2s ease-out;
+}
+
+.photoshop {
+	width: 10%;
+	-moz-animation: photoshop 2s ease-out;
+	-webkit-animation: photoshop 2s ease-out;
+}
+
+
+
+@-moz-keyframes html5 {
+	0% {
+		width: 0px;
+	}
+
+	100% {
+		width: 70%;
+	};
+}
+
+@-moz-keyframes css3 {
+	0% {
+		width: 0px;
+	}
+
+	100% {
+		width: 90%;
+	};
+}
+
+@-moz-keyframes jquery {
+	0% {
+		width: 0px;
+	}
+
+	100% {
+		width: 50%;
+	};
+}
+
+@-moz-keyframes photoshop {
+	0% {
+		width: 0px;
+	}
+
+	100% {
+		width: 10%;
+	};
+}
+
 
 /* ##################################################################### */
 /* ##########################   SMARTPHONE   ########################### */
