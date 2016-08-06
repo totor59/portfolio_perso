@@ -15,7 +15,6 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/flexbox.css">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
 
     <body>
@@ -26,7 +25,7 @@
         <!-- Add your site or application content here -->
 
 	<!-- Header -->
-
+	<header>
 	<nav class="navbardefault">
 		<ul>
 			<li><img src="img/logo.png"</li>
@@ -45,15 +44,27 @@
 			<li><a href="contact.html" class="active">Contact</a></li>
 		</ul>
 	</nav>
-
+	</header>
+	<menu class="mobilemenu">
+		<img src="img/logo.png">
+	<a class="btn btn-navbar" id="btnMenu">
+		<img src="icon/menu.png">
+	</a>	
+	<nav id="nav" class="navmobile">
+		<ul>
+			<li><a href="home.html">HOME</a></li>
+			<li><a href="about.html">ABOUT</a></li>
+			<li><a href="portfolio.html">PORTFOLIO</a></li>
+			<li><a href="contact.html">CONTACT</a></li>
+		</ul>
+	</nav>
+	</menu>
 	<!-- /Header -->
 
 
 
 
-        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
+
         <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

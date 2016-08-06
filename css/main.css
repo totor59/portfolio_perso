@@ -146,6 +146,9 @@ img[src*="icon"]:hover {
 /* ==========================================================================
 Header General
 ========================================================================== */
+header {
+	display:none;
+}
 .navbardefault, 
 .subnav {
 	border-bottom: 1px solid #E5E5E5;
@@ -189,10 +192,42 @@ input[type="text"]:focus {
 
 img[src*="logo"] {
 	height: 40px;
-	margin: 10px 5px;
+	margin: 10px 14px;
 }
 
-
+/* Menu Mobile */
+.mobilemenu,
+.mobilemenu li {
+	padding: 0;
+	margin: 0;
+}
+.mobilemenu {
+	height: 60px;
+	background-color: #F1F1F1;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+.btn {
+	cursor: pointer;
+	margin: 14px;
+	float: right;
+}
+#nav {
+	display: none;
+}
+.navmobile ul {
+	position: fixed;
+	top: 60px;
+	width: 100%;
+}
+.navmobile li {
+	display: block;
+	width: 100%;
+	text-align: center;
+	line-height: 50px;
+	border-bottom: 1px solid black;
+}
 /* ==========================================================================
 Header MainPage
 ========================================================================== */
@@ -524,7 +559,15 @@ article a:hover {
 /* ##################################################################### */
 /* ##########################   SMARTPHONE   ########################### */
 /* ##################################################################### */
-
+@media screen and (min-width:500px) {
+	/* Menu */
+header {
+	display: block;
+}
+.mobilemenu {
+	display: none;
+}
+}
 
 
 /* ##################################################################### */
@@ -532,6 +575,8 @@ article a:hover {
 /* ##################################################################### */
 
 @media screen and (min-width:700px) {
+
+
 	/* About */
 .left {
 	width: 60%;
