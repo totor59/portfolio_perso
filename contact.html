@@ -28,7 +28,7 @@
 	<header>
 	<nav class="navbardefault">
 		<ul>
-			<li><img src="img/logo.png"</li>
+			<li><img src="img/logo.gif"</li>
 			<li><input type="text" value="Where do you want to go?"></li>
 		</ul>
 		<ul class="pushleft">
@@ -47,25 +47,54 @@
 	</header>
 	<menu class="mobilemenu">
 		<img src="img/logo.png">
-	<a class="btn btn-navbar" id="btnMenu">
-		<img src="icon/menu.png">
-	</a>	
-	<nav id="nav" class="navmobile">
-		<ul>
-			<li><a href="home.html">HOME</a></li>
-			<li><a href="about.html">ABOUT</a></li>
-			<li><a href="portfolio.html">PORTFOLIO</a></li>
-			<li><a href="contact.html">CONTACT</a></li>
-		</ul>
-	</nav>
+		<a class="btn btn-navbar" id="btnMenu">
+			<img src="icon/menu.png">
+		</a>	
+		<nav id="nav" class="navmobile">
+			<ul>
+				<li><a href="home.html">HOME</a></li>
+				<li><a href="about.html">ABOUT</a></li>
+				<li><a href="portfolio.html">PORTFOLIO</a></li>
+				<li><a href="contact.html">CONTACT</a></li>
+			</ul>
+		</nav>
 	</menu>
 	<!-- /Header -->
 
+	<!-- Main Content -->
+	<main class="contact">
+	<figure class="social-links">
+		<figcaption>You can follow me at...</figcaption>
+		<ul>
+			<li><a href=""><img src="icon/twitter.png">  Twitter</a></li>
+			<li><a href=""><img src="icon/github.png">  Github</a></li>
+			<li><a href=""><img src="icon/overflow.png">  StackOverflow</a></li>
+			<li><a href=""><img src="icon/gmail.png">  Gmail</a></li>
+		</ul>
+	</figure>
+	<figure class="mail">
+		<figcaption>... or send me an email here!</figcaption>
+		<form id="contact" action="" method="post">
+			<fieldset>
+				<legend>1.Please type your name here</legend>
+				<input placeholder="Your name" type="text" tabindex="1" required autofocus>
+			</fieldset>
+			<fieldset>
+				<input placeholder="Your Email Address" type="email" tabindex="2" required>
+			</fieldset>
+						<fieldset>
+				<textarea placeholder="Type your Message Here...." tabindex="3" required></textarea>
+			</fieldset>
+			<fieldset>
+				<button name="submit" type="submit" id="contact-submit" data-submit="...Sending">SUBMIT</button>
+			</fieldset>
+		</form>	
+	</main>
+	<!-- /Main Content -->
 
 
 
-
-        <script src="js/main.js"></script>
+	<script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
