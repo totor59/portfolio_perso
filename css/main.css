@@ -188,6 +188,7 @@ img[src*="logo"] {
 	top: 0;
 	width: 100%;
 	z-index: 100;
+	border-bottom: 1px solid #E5E5E5;
 }
 .btn {
 	cursor: pointer;
@@ -201,14 +202,32 @@ img[src*="logo"] {
 	position: fixed;
 	top: 60px;
 	width: 100%;
+	-webkit-transition: all .5s ease;
+	transition: all .5s ease;
 }
 .navmobile li {
 	display: block;
 	width: 100%;
 	text-align: center;
 	line-height: 50px;
-	border-bottom: 1px solid black;
+	border-bottom: 2px solid #F1F1F1;
 	background-color: #fff;
+}
+.navmobile li:first-child {
+	border-top: 2px solid #F1F1F1;
+}
+.navmobile > ul > li:hover > a {
+	color: #fff;
+	font-size: 1.05rem;
+	font-weight: bold;
+}
+.navmobile > ul > li:hover {
+	background: #4285F4;
+	line-height: 55px;
+	-webkit-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
+
 }
 /* ==========================================================================
 Header MainPage
