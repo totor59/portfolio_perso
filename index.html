@@ -15,9 +15,9 @@
         <link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/flexbox.css">
         <link rel="stylesheet" href="css/main.css">
+ 
     </head>
-
-    <body>
+    <body onload='myInit()'>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -28,28 +28,57 @@
 	<!-- ######### HEADER ######### -->
 
 
-	<nav class="navbar">
-		<ul class="flexbox1">
-			<li><a href="">Mail</a></li>
-			<li><a href="">Portfolio</a></li>
+	<header>
+	<nav class="navbardefault">
+		<ul>
+			<li><img src="img/logo.gif"</li>
+			<li><input type="text" value="Where do you want to go?"></li>
+		</ul>
+		<ul class="pushleft">
 			<li><a href=""><img src="icon/github.png"></a></li>
 			<li><img src="img/TT.png" class="tt"></li>
 		</ul>
 	</nav>
+	<nav class="subnav">
+		<ul>
+			<li><a href="index.html"class="active">Home</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="portfolio.html">Portfolio</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+	</nav>
+	</header>
+	<menu class="mobilemenu">
+		<img src="img/logo.gif">
+	<a class="btn btn-navbar" id="btnMenu">
+		<img src="icon/menu.png">
+	</a>	
+	<nav id="nav" class="navmobile">
+		<ul>
+			<li><a href="home.html">HOME</a></li>
+			<li><a href="about.html">ABOUT</a></li>
+			<li><a href="portfolio.html">PORTFOLIO</a></li>
+			<li><a href="contact.html">CONTACT</a></li>
+		</ul>
+	</nav>
+	</menu>
 
 
 	<!-- ######### /HEADER ######### -->
 
 	<!-- ######### MAIN-CONTENT ######### -->
 
-	<main class="index">
-		<h1>TOTOR</h1>
-		<input list="Recherche" type="text" id="searchbar" placeholder="Where do you want to go?">
-		<datalist id="Recherche">
-			<option value="Portfolio"><a href="portfolio.html">Portfolio</a></option>
-			    <option value="Skills">
-			      <option value="Contact">
-		</datalist>
+	<main class="index">	
+	<canvas id='myCanvas'></canvas> 
+		 <section class="menu">
+		  <map name="pig">
+			  <area shape="poly" name="Contact" onmouseover='myHover(this);' onmouseout='myLeave();' href="contact.html" coords="398,72,363,100,189,105,181,70,196,67,320,66,370,67" id="imgmap-1"/>
+				  <area shape="poly" name="About" onmouseover='myHover(this);' onmouseout='myLeave();' href="about.html" coords="189,110,219,107,263,104,305,103,363,103,346,131,343,152,344,162,198,171" id="imgmap-2"/>
+					  <area shape="poly" onmouseover='myHover(this);' onmouseout='myLeave();' href="about.html" coords="" id="imgmap-3"/>
+						  <area shape="poly" onmouseover='myHover(this);' onmouseout='myLeave();' href="portfolio.html" coords="" id="imgmap-4"/>
+		  </map>
+		  <img src="img/pig.png" usemap="#pig" id="butchermenu">
+	  </section> 
 		<div class="btn-group">
 		<a href="#">Recherche Totor</a>
 		<a href="#" id="random">J'ai de la chance</a>
@@ -65,9 +94,9 @@
 	</footer>
 
 
+	<script src="js/index.js"></script>
+ 
 
-        <script src="js/main.js"></script>
-        <script src="js/index.js"></script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
