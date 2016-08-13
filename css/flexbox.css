@@ -125,8 +125,7 @@
 .contact {
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: space-around;
-	align-items: stretch;
+	justify-content: space-between;
 }
 
 /* ==========================================================================

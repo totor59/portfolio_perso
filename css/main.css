@@ -105,12 +105,29 @@ a:hover {
 .active a {
 
 }
-
+textarea, input {
+	box-shadow: none;
+}
+textarea:hover,
+input:hover {
+	border: 1px solid #bdbdbd;
+}
+textarea:focus,
+input:focus {
+	border: 1px solid #4386f9;
+	box-shadow: inset 1px 2px 2px 1px #4386f9;
+}
 img[src*="icon"] {
 	opacity: 0.6;
 }
 img[src*="icon"]:hover {
 	opacity: 1;
+}
+legend {	
+	color: #006621;
+	margin: 20px 0 5px 0;
+	font-size: 16px;
+	font-weight: bold;
 }
 
 
@@ -161,14 +178,7 @@ header {
 	background-color: #fff;	
 	border: 1px solid #e0e0e0;
 }
-#searchbar:hover,
-input[type="text"]:hover {
-	border: 1px solid #bdbdbd;
-}
-#searchbar:focus,
-input[type="text"]:focus {
-	border: 1px solid #4386f9;
-}
+
 
 img[src*="logo"] {
 	height: 40px;
@@ -311,14 +321,14 @@ Portfolio
 ========================================================================== */
 .portfolio {
 	width: 90%;
-	margin: 60px 5% 50px 5%;
+	margin: 80px 5% 50px 5%;
 	background-color: #F1F1F1;
 	border-radius: 10px;
-	padding: 10px;
+       /* padding: 10px;*/
 
 }
 .thumbnails {
-	width: 60%;
+	width: 80%;
 	margin: 20px 0;
 	padding: 0;
 	position: relative;
@@ -342,6 +352,9 @@ Portfolio
 	border-radius: 0 0 10px 10px;
 	display: none;
 }
+.thumbnails figcaption p {
+	margin-left: 8px;
+}
 .thumbnails:hover {
 	box-shadow: -2px 4px 4px 4px #4386f9;
 }
@@ -356,12 +369,11 @@ Portfolio
 /* ==========================================================================
 About
 ========================================================================== */
-.contact,
 .about {
 	width: 90%;
 	margin: 80px 5% 5% 5%;
 }
-.contact figure,
+.mail, .social-links,
 .about figure {
 	width: 100%;
 	border-radius: 10px;
@@ -387,6 +399,9 @@ h2, .content figcaption {
 }
 
 /* Article principal */
+.left, .right {
+	width: 100%;
+}
 .left article {
 	background-color: #F1F1F1;
 	padding: 10px;
@@ -407,7 +422,7 @@ article a:hover {
 	text-decoration: underline;
 }
 /* Aside */
-.right img[src="img/toto.png"] {
+.right img[src="img/totor.png"] {
 	min-height: 0;
 	min-width: 0;
 	max-height: 400px;
@@ -593,14 +608,19 @@ Contact
 .mail form input {
 	width: 100%;
 	border-radius:10px;
-	margin: 20px 0 0 0;
 	line-height: 30px;
 }
 .mail form button {
-	background: #4caf50;
-	color: #fff;
+	background: #f44336;
+	color: #F1F1F1;
 	font-size: 22px;
 	font-weight: bold;
+	margin: 20px 0;
+}
+.mail button:hover {
+	border: 1px solid #bdbdbd;
+	font-size: 23px;
+	color: #FFF;
 }
 .mail form textarea {
 	height: 150px;
@@ -631,7 +651,6 @@ header {
 
 
 	/* About */
-
 .left {
 	width: 60%;
 }
@@ -656,6 +675,13 @@ header {
 /* ##################################################################### */
 
 @media screen and (min-width: 1000px) {
+	.mail {
+		width: 60%;
+		margin-top: 0;
+	}
+	.social-links {
+		width: 35%;
+	}
 	.navbardefault input {
 		display: inline-block; 
 	}
