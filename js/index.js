@@ -6,6 +6,7 @@
 // initialized in myInit, used in myHover and myLeave
 var hdc;
 
+
 // shorthand func
 function byId(e){return document.getElementById(e);}
 
@@ -35,10 +36,12 @@ function myHover(element)
 	var coordStr = element.getAttribute('coords');
 	var areaType = element.getAttribute('shape');	
 	var text = element.getAttribute("name");
-  	hdc.font = "48px Arial";	
+  	hdc.font = "48px 'Indie Flower'";	
        	hdc.fillText(text,15,40);
 	drawPoly(coordStr);
-	
+	var arrayColor = ["#f44336", "#3f51b5", "#9c27b0",  "#8bc34a", "#ffc107"];
+	var randomColor = arrayColor[Math.floor(Math.random() * arrayColor.length)];
+	hdc.fillStyle= randomColor;
 	}
 
 function myLeave()
@@ -79,15 +82,10 @@ function myInit() {
 
 	// set the 'default' values for the colour/width of fill/stroke operations
 	hdc.closePath();
-	var my_gradient=hdc.createLinearGradient(0, 0, 0, 170);
-	my_gradient.addColorStop(0,"red");
-	my_gradient.addColorStop(1,"white");
-	hdc.globalAlpha=0.4;
-	hdc.fillStyle=my_gradient;
-        //  hdc.fillStyle = 'red';
-	
-	// hdc.strokeStyle = 'blue';
-	// hdc.stroke();
+
+	hdc.globalAlpha=0.9;
+
+        
 	hdc.lineWidth = 2;
 	hdc.fill();
 

@@ -67,6 +67,33 @@ Author's custom style
 ========================================================================== */
 
 /* ==========================================================================
+Fonts
+========================================================================== */
+
+* figcaption,
+* button  {
+	font-family: 'Ubuntu';
+	font-weight: bold;
+}
+* h3,
+* legend,
+* span {
+	font-family: 'Ubuntu';
+	font-weight: medium;
+}
+* a {
+	font-family: 'Ubuntu';
+	font-weight: normal;
+}
+* p,
+* input {
+	font-family: 'Ubuntu';
+	font-weight: light;
+}
+
+	
+
+/* ==========================================================================
 General
 ========================================================================== */
 html {
@@ -105,20 +132,9 @@ a:hover {
 .active a {
 
 }
-textarea, input {
-	box-shadow: none;
-}
-textarea:hover,
-input:hover {
-	border: 1px solid #bdbdbd;
-}
-textarea:focus,
-input:focus {
-	border: 1px solid #4386f9;
-	box-shadow: inset 1px 2px 2px 1px #4386f9;
-}
+
 img[src*="icon"] {
-	opacity: 0.6;
+	opacity: 0.8;
 }
 img[src*="icon"]:hover {
 	opacity: 1;
@@ -129,8 +145,25 @@ legend {
 	font-size: 16px;
 	font-weight: bold;
 }
+button {
+	border:2px solid #df0909;
+	border-radius: 10px;
+	font-size: 24px;
+	line-height: 30px;
+	margin: 5px 0;
+	color: #df0909;
+	background-color: #FFF;
+	opacity: 0.7;
+	font-weight: bold;
+	transition: 1s;
+}
 
-
+button:hover {
+	border:2px solid #b30808;
+	color: #b30808;
+	opacity: 1;
+	transition: 1s;
+}
 /* ==========================================================================
 Header General
 ========================================================================== */
@@ -206,7 +239,11 @@ img[src*="logo"] {
 	float: right;
 }
 #nav {
-	display: none;
+	display: block;
+	visibility: hidden;
+}
+#btnMenu:focus + #nav {
+	visibility: visible;
 }
 .navmobile ul {
 	position: fixed;
@@ -222,6 +259,9 @@ img[src*="logo"] {
 	line-height: 50px;
 	border-bottom: 2px solid #F1F1F1;
 	background-color: #fff;
+}
+.navmobile li a {
+	display: block;
 }
 .navmobile li:first-child {
 	border-top: 2px solid #F1F1F1;
@@ -285,7 +325,7 @@ canvas {
 	overflow: hidden;
 }
 .index {
-	margin-top: 60px;
+	margin: 60px 0;
 	width: 100%;
 	text-align: center;
 	overflow: hidden;
@@ -320,41 +360,52 @@ Portfolio
 
 }
 .thumbnails {
-	width: 80%;
+	width: 80vw;
+	height: 80vw;
+	overflow: hidden;
 	margin: 20px 0;
 	padding: 0;
 	position: relative;
 	border-radius: 10px;
+	border: 1px solid #757575;
 
 }
+
 .thumbnails img {
 	width: 100%;
+	overflow: hidden;
 	z-index: 0;
 	border-radius: 10px;
-	border: 2px solid #757575;
 }
 .thumbnails figcaption {
 	line-height: 60px;
 	width: 100%;
-	background-color: #fff;
+	background-color: rgba(241, 241, 241, 0.9);
 	position: absolute;
 	bottom: 0;
 	z-index: 1;
-	border: 2px solid #424242;
+	border-top: 1px solid #424242;
 	border-radius: 0 0 10px 10px;
-	display: none;
+	visibility: hidden;
+	color: #424242;
+	font-size: 18px;
 }
 .thumbnails figcaption p {
 	margin-left: 8px;
 }
-.thumbnails:hover {
-	box-shadow: -2px 4px 4px 4px #4386f9;
+figure:hover {
+	box-shadow: -2px 2px 1px 1px rgba(67, 134, 249, 0.4);
+	transition: 1s;
 }
 .thumbnails:hover figcaption {
 	display: block;
+	transition: 1s;
+	visibility: visible;
+	border-top: 1px solid #424242;
 }
-.thumbnails:hover img {
-	border: 2px solid #424242;
+.thumbnails:hover {
+	border: 1px solid #424242;
+	transition: 1s;
 }
 
 
@@ -381,12 +432,11 @@ About
 	border-radius: 10px;
 	color: #4285F4;
 	font-size: 22px;
-	font-weight: bold;
-	font-family: Arial;
-
 }
 
-h2, .content figcaption {
+h2, .content figcaption,
+.contact figcaption,
+.wiki figcaption{
 	text-decoration: underline;
 }
 
@@ -394,22 +444,22 @@ h2, .content figcaption {
 .left, .right {
 	width: 100%;
 }
-.left article {
-	background-color: #F1F1F1;
-	padding: 10px;
-	border-radius: 10px;
-	margin: 20px 0;
+.wiki {
+	margin-left: 0;
 }
 .job {
 	color: #006621;
 }
-article p, article h2 {
-	margin: 0;
+.wiki p, .wiki h3 {
+	margin: 0 15px;
 }
-article a {
+.wiki a {
 	color: #1A0DAB;
 }
-article a:hover {
+.wikilinks {
+	padding:5px 0 10px 0;
+}
+.wiki a:hover {
 	color: #1A0DAB;
 	text-decoration: underline;
 }
@@ -418,15 +468,21 @@ article a:hover {
 	min-height: 0;
 	min-width: 0;
 	max-height: 400px;
-        width: 100%;	
 	border-radius: 10px;
+	width: 90%;
+	height: 90%;
+	margin: 5% 5% 0 5%;
 }
-.right .img-container {
-	border-radius: 10px;
-	background-color: #F1F1F1;
+.img-container {
+	margin: 0;
+	padding: 10;
+}
+.img-container ul {
 	padding: 10px;
 }
-
+.img-container span {
+	line-height: 30px;
+}
 /* Twitter */
 .twitter {
 	margin: 0;	
@@ -584,6 +640,9 @@ Contact
 .social-links {
 	margin: 0;
 }
+.social-links ul {
+	margin-left: 10%;
+}
 .social-links, .mail {
 	padding: 10px;
 }
@@ -591,28 +650,34 @@ Contact
 	line-height: 25px;
 	margin: 10px;	
 }
+.social-links img {
+	height: 32px;
+}
 .contact form {
 	width: 90%;
 	margin: 0 5%;
 }
-.mail form button,
 .mail form textarea,
 .mail form input {
 	width: 100%;
-	border-radius:10px;
-	line-height: 30px;
+	border-radius:15px;
+	padding: 6px 0;
+	margin:0; 
 }
-.mail form button {
-	background: #f44336;
-	color: #F1F1F1;
-	font-size: 22px;
-	font-weight: bold;
-	margin: 20px 0;
+.mail form textarea,
+.mail form input {
+	opacity: 0.5;
 }
-.mail button:hover {
-	border: 1px solid #bdbdbd;
-	font-size: 23px;
-	color: #FFF;
+.mail form textarea:hover,
+.mail form textarea:focus,
+.mail form input:hover,
+.mail form input:focus {
+	opacity: 1;
+	transition: 0.75s;
+}
+.mail button {
+	width: 100%;
+	margin: 0;	
 }
 .mail form textarea {
 	height: 150px;
@@ -650,13 +715,14 @@ header {
 .right {
 	width: 35%;
 }
-.left article {
+.wiki {
 	margin: 0 0 20px 0;
 }
 
 /* Portfolio */
 .thumbnails {
-	width: 40%;
+	width: 40vw;
+	height: 40vw;
 }
 }
 
@@ -679,7 +745,8 @@ header {
 		display: inline-block; 
 	}	
 	.thumbnails {
-		width: 30%;
+		width: 27vw;
+		height: 27vw;
 	}
 }
 
