@@ -1,65 +1,17 @@
-<!doctype html>
-<html class="no-js" lang="fr">
-
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<!-- Don't forget the title -->
-		<title>t0t0&#x44f;.com</title>
-		<meta name="description" content="">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- Place favicon.ico in the root directory -->
-		<link rel="icon" type="image/gif" href="favicon.gif">
-		<link rel="apple-touch-icon" href="apple-touch-icon.png">
-		<!-- CSS links -->
-		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/main.css">
-		<link rel="stylesheet" href="css/flexbox.css">
-		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> 
-	</head>
-
-    <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
-        <!-- Add your site or application content here -->
-
-	<!-- Header -->
-	<header>
-	<nav class="navbardefault">
+<?php include("header.php"); ?>
+<!-- HEADER -->
+<header>
+		<nav class="subnav">
+			<img src="img/logo.gif">
 		<ul>
-			<li><img src="img/logo.gif"></li>
-			<li><input type="text" value="Where do you want to go?"></li>
-		</ul>
-		<ul class="pushleft">
-			<li><a href="https://github.com/totor59"><img src="icon/github.png"></a></li>
-			<li><img src="img/TT.png" class="tt"></li>
-		</ul>
-	</nav>
-	<nav class="subnav">
-		<ul>
-			<li><a href="index.html" >About</a></li>
-			<li><a href="portfolio.html">Portfolio</a></li>
-			<li><a href="contact.html" class="active">Contact</a></li>
+			<li><a href="index.php">About</a></li>
+			<li><a href="portfolio.php">Portfolio</a></li>
+			<li><a href="contact.php" class="active">Contact</a></li>
 		</ul>
 	</nav>
 	</header>
-	<menu class="mobilemenu">
-		<img src="img/logo.gif">
-		<a class="btn btn-navbar" id="btnMenu">
-			<img src="icon/menu.png">
-		</a>	
-		<nav id="nav" class="navmobile">
-			<ul>
-				<li><a href="index.html">ABOUT</a></li>
-				<li><a href="portfolio.html">PORTFOLIO</a></li>
-				<li><a href="contact.html">CONTACT</a></li>
-			</ul>
-		</nav>
-	</menu>
-	<!-- /Header -->
 
+<!-- /HEADER -->
 	<!-- Main Content -->
 	<main class="contact">
 	<figure class="social-links">
@@ -72,7 +24,8 @@
 			<li><a href="https://fr.pinterest.com/tminator/"><img src="icon/pinterest.png">  Pinterest</a></li>
 			<li><a href="https://soundcloud.com/victor-marechal"><img src="icon/soundcloud.png">  SoundCloud</a></li>
 			<li><a href="https://www.linkedin.com/in/victor-marechal-a98166123?trk=hp-identity-name"><img src="icon/linkedin.png">  Linkedin</a></li>
-		</ul>
+			<li><a href="cv_victormarechal.pdf" target="_blank" class="cvbutton">&nbsp;Consultez mon CV&nbsp;</a></li>
+	</ul>		
 	</figure>
 	<figure class="mail">
 		<figcaption>... or send me an email here!</figcaption>
